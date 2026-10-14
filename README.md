@@ -58,6 +58,7 @@ The same app shows three different apps, depending on who signs in. The split is
 
 - A Healthy section with lighter swaps, and the reason shown for every score.
 - Usual orders back in the cart in one tap, plus a weekly spend and budget.
+- Breaks read from a photo of the class timetable (on iPhone), so an order can be planned for the next one. The photo is read on the phone and not kept.
 - Together: a group chat where friends plan one order.
 
 ### Counter staff
@@ -94,7 +95,7 @@ A large-type kitchen display, readable from across the kitchen.
 | Counter screens, kitchen display, pass scanner | Built and tested |
 | Cashier, menu and stock control, hours, offers, staff accounts, sales report | Built and tested |
 | Group chat, catering requests for campus events, late pickup | Built and tested |
-| Online payment by UPI or card | Written and tested in test mode; not switched on |
+| Online payment by UPI or card | Written and tested in test mode; not switched on. Students see a preview marked "not on yet" |
 | Alerts while the app is closed | Not yet; needs a paid cloud plan |
 | App Store and Play Store | Not yet listed |
 | Use by real students | Not yet; a pilot comes first |
