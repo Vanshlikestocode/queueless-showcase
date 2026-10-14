@@ -2,7 +2,7 @@
 
 **Skip the queue. Grab your food.** A pre-ordering app for a college canteen: order from the classroom, pick a pickup time, and walk up when the food is ready.
 
-Built by **Vansh Dave** and **Swara Tillu**.
+Built by **Vansh Dave** (backend) and **Swara Tillu** (front end), B.Tech Artificial Intelligence students at MPSTME Mumbai.
 
 ![QueueLess: one app for students, counter staff and the canteen admin](images/hero.jpg)
 
@@ -134,6 +134,7 @@ A large-type kitchen display, readable from across the kitchen.
 | Pickup pass | QR drawing, camera scanning and a time-based code |
 | Payments, when switched on | Razorpay through Cloud Functions |
 | Checks | Flutter tests, Firebase emulators and GitHub Actions |
+| AI assistance | Claude Code and other AI tools, used as coding partners |
 
 ```mermaid
 flowchart LR
