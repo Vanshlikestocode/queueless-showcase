@@ -2,6 +2,8 @@
 
 **Skip the queue. Grab your food.** A pre-ordering app for a college canteen: order from the classroom, pick a pickup time, and walk up when the food is ready.
 
+Built by **Vansh Dave** and **Swara Tillu**.
+
 ![QueueLess: one app for students, counter staff and the canteen admin](images/hero.jpg)
 
 ![Flutter](https://img.shields.io/badge/Flutter-3.38-02569B?logo=flutter&logoColor=white)
@@ -12,11 +14,11 @@
 
 > **Status, stated plainly.** QueueLess is built and tested, and loaded with a real canteen menu of 284 dishes. It has not been used by real students yet, so nothing on this page claims a time saving. A four-week pilot is the next step.
 
-## Why I built it
+## Why we built it
 
-At my college, a break starts and everyone reaches the canteen at the same moment. You stand in one line to pay, then wait again for the food. Behind the counter, orders, money and cooking all begin at once.
+At our college, a break starts and everyone reaches the canteen at the same moment. You stand in one line to pay, then wait again for the food. Behind the counter, orders, money and cooking all begin at once.
 
-I read that as a problem of timing more than of speed. So the whole project comes down to one question:
+We read that as a problem of timing more than of speed. So the whole project comes down to one question:
 
 **What if the order reached the kitchen before the student reached the counter?**
 
@@ -100,7 +102,7 @@ A large-type kitchen display, readable from across the kitchen.
 | App Store and Play Store | Not yet listed |
 | Use by real students | Not yet; a pilot comes first |
 
-## The parts I am proudest of
+## The parts we are proudest of
 
 **The phone is never trusted.** An app on a student's phone can be modified, so the app decides nothing that matters. The database prices every order again from the menu and refuses a total that does not match. Those rules run to 1,395 lines.
 
@@ -114,7 +116,7 @@ A large-type kitchen display, readable from across the kitchen.
 
 ## What was hard
 
-1. **My own fixes were not enough.** After a first security audit, the fixed rules were attacked a second time. Nine attacks got through. Eight are closed, each with a check that would catch it if it came back, and one minor one was accepted and written down. Passing tests only prove that the attacks you thought of are refused.
+1. **Our own fixes were not enough.** After a first security audit, the fixed rules were attacked a second time. Nine attacks got through. Eight are closed, each with a check that would catch it if it came back, and one minor one was accepted and written down. Passing tests only prove that the attacks you thought of are refused.
 2. **The database has a ceiling.** Firestore stops evaluating a rule after 1,000 steps. A six-dish order with opening hours checked came close, which is why an order is capped at six dishes.
 3. **The canteen's payment QR could not be reused.** The billing machine prints a fresh code for every bill. So payment stays at the canteen's own till, and the cashier confirms it in the app.
 4. **One person for money, another for food.** That is how the canteen already works, so the app copies it: counter staff cannot record a payment at all.
@@ -163,7 +165,7 @@ Counted from the source on 14 October 2026.
 
 ## About the code
 
-The source code is in a private repository while a pilot is being discussed. I am happy to walk through it: the architecture, the security rules and the tests.
+The source code is in a private repository while a pilot is being discussed. We are happy to walk through it: the architecture, the security rules and the tests.
 
 ## Notes
 
@@ -171,4 +173,4 @@ The source code is in a private repository while a pilot is being discussed. I a
 - Dish photos are from Unsplash under its licence. Fonts are Sora and Plus Jakarta Sans under the SIL Open Font License.
 - QueueLess is a student project. It is not affiliated with or endorsed by any college or canteen.
 
-© 2026 Vansh Dave. All rights reserved.
+© 2026 Vansh Dave and Swara Tillu. All rights reserved.
