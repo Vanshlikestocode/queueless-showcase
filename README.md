@@ -8,8 +8,8 @@ Built by **Vansh Dave** (backend) and **Swara Tillu** (front end), B.Tech Artifi
 
 ![Flutter](https://img.shields.io/badge/Flutter-3.38-02569B?logo=flutter&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-Auth%20%C2%B7%20Firestore-DD2C00?logo=firebase&logoColor=white)
-![App tests](https://img.shields.io/badge/app%20tests-463%20passing-1F7A4A)
-![Rule checks](https://img.shields.io/badge/security%20rule%20checks-520%20passing-1F7A4A)
+![App tests](https://img.shields.io/badge/app%20tests-594%20passing-1F7A4A)
+![Rule checks](https://img.shields.io/badge/security%20rule%20checks-610%20passing-1F7A4A)
 ![Platforms](https://img.shields.io/badge/platforms-iOS%20%C2%B7%20Android-152040)
 
 > **Status, stated plainly.** QueueLess is built and tested, and loaded with a real canteen menu of 284 dishes. It has not been used by real students yet, so nothing on this page claims a time saving. A four-week pilot is the next step.
@@ -68,6 +68,7 @@ The same app shows three different apps, depending on who signs in. The split is
 ![Counter staff: orders to make, kitchen display and a scanned pass](images/counter-1-make.jpg)
 
 - One list of what to cook, with daily order numbers and the student's note.
+- "Not on our menu" for a dish the canteen does not make; the admin switches it off in one tap.
 - Three actions to learn: mark ready, scan, hand over.
 - "Running late" and "dish not available" in one tap.
 - Screens in English, Hindi or Marathi.
@@ -87,7 +88,14 @@ A large-type kitchen display, readable from across the kitchen.
 
 - The canteen runs its own menu: price, sold out, offers, portions a day, serving hours.
 - A sales report for today, the last 7 days or the last 30.
-- Staff accounts, opening hours, problem reports and catering requests.
+- Staff accounts, with a staff ID login for anyone who has no email, plus opening hours, problem reports and catering requests.
+- New dishes start switched off, so nothing reaches students before the canteen turns it on.
+
+### The TV order board
+
+![TV order board: numbers being made and numbers ready to collect](images/tv-order-board.jpg)
+
+A TV by the counter shows the numbers being made, with about when each will be ready, and the numbers ready to collect. Numbers only: no names, no dishes, no sound. It runs on its own login, made by the admin, which can change nothing.
 
 ## What is working, and what is not
 
@@ -97,6 +105,7 @@ A large-type kitchen display, readable from across the kitchen.
 | Counter screens, kitchen display, pass scanner | Built and tested |
 | Cashier, menu and stock control, hours, offers, staff accounts, sales report | Built and tested |
 | Group chat, catering requests for campus events, late pickup | Built and tested |
+| TV order board, staff ID logins, menu safety | Built and tested |
 | Online payment by UPI or card | Written and tested in test mode; not switched on. Students see a preview marked "not on yet" |
 | Alerts while the app is closed | Not yet; needs a paid cloud plan |
 | App Store and Play Store | Not yet listed |
@@ -104,15 +113,15 @@ A large-type kitchen display, readable from across the kitchen.
 
 ## The parts we are proudest of
 
-**The phone is never trusted.** An app on a student's phone can be modified, so the app decides nothing that matters. The database prices every order again from the menu and refuses a total that does not match. Those rules run to 1,395 lines.
+**The phone is never trusted.** An app on a student's phone can be modified, so the app decides nothing that matters. The database prices every order again from the menu and refuses a total that does not match. Those rules run to 1,550 lines.
 
-**520 automated attacks, all refused.** Each check tries to cheat the rules: a lowered price, a student marking an order paid, reading someone else's order, joining a chat without its code.
+**610 automated attacks, all refused.** Each check tries to cheat the rules: a lowered price, a student marking an order paid, reading someone else's order, joining a chat without its code.
 
 **A pass that cannot be copied.** The QR holds a code derived from the order's secret key and the time. It changes every 30 seconds, and the pass expires a minute after its first scan.
 
-**Wait times that do not lie.** Every dish belongs to a station: tawa, stove, drinks and so on. An order takes as long as its slowest station, with the queue ahead counted in, and the result is shown as a range.
+**Wait times that do not lie.** Every dish belongs to a station: tawa, stove, drinks and so on. Batches overlap, as in a real kitchen. An order takes as long as its slowest station, with the queue ahead counted in, and the result is shown as a range.
 
-**Tests that walk the whole app.** 463 tests, including full journeys as a student, as counter staff and as the admin, at four screen sizes in light and dark mode. Any layout that overflows fails the build.
+**Tests that walk the whole app.** 594 tests, including full journeys as a student, as counter staff and as the admin, at four screen sizes in light and dark mode and at a larger text size, and a busy day of 220 orders. Any layout that overflows fails the build.
 
 ## What was hard
 
@@ -122,6 +131,7 @@ A large-type kitchen display, readable from across the kitchen.
 4. **One person for money, another for food.** That is how the canteen already works, so the app copies it: counter staff cannot record a payment at all.
 5. **It felt slow before it felt quick.** Early versions redrew the whole home screen on every tap. Now each row listens only for its own count.
 6. **Saying no.** A seat-finder was dropped, because nobody would mark that they had left a seat.
+7. **Photos can be wrong.** 51 dish photos had to be replaced, several of which showed meat on a vegetarian dish.
 
 ## Built with
 
@@ -148,14 +158,14 @@ flowchart LR
 
 | | |
 | --- | --- |
-| App code | 50,810 lines of Dart in 190 files |
-| Screens | 55 |
-| Automated app tests | 463 |
-| Attack checks on the database rules | 520 |
-| Menu | 284 dishes in 20 categories |
-| Roles | 3 |
+| App code | 58,264 lines of Dart in 207 files |
+| Screens | 59 |
+| Automated app tests | 594 |
+| Attack checks on the database rules | 610 |
+| Menu | 284 dishes in 19 categories |
+| Roles | 3, plus a TV-screen login |
 
-Counted from the source on 14 October 2026.
+Counted from the source on 10 November 2026.
 
 ## What is next
 
@@ -170,7 +180,7 @@ The source code is in a private repository while a pilot is being discussed. We 
 
 ## Notes
 
-- Counter and admin screenshots, the tracking screen and the pass show sample orders with made-up names. The browsing screens show the real menu.
+- Counter and admin screenshots, the TV board, the tracking screen and the pass show sample orders with made-up names. The browsing screens show the real menu.
 - Dish photos are from Unsplash under its licence. Fonts are Sora and Plus Jakarta Sans under the SIL Open Font License.
 - QueueLess is a student project. It is not affiliated with or endorsed by any college or canteen.
 
