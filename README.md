@@ -12,6 +12,12 @@ Built by **Vansh Dave** (backend) and **Swara Tillu** (front end), B.Tech Artifi
 ![Rule checks](https://img.shields.io/badge/security%20rule%20checks-610%20passing-1F7A4A)
 ![Platforms](https://img.shields.io/badge/platforms-iOS%20%C2%B7%20Android-152040)
 
+## See it in motion
+
+[![Watch the 86-second QueueLess video](images/video-preview.jpg)](https://github.com/Vanshlikestocode/queueless-showcase/releases/download/video/QueueLess-video.mp4)
+
+An 86-second tour of the student, counter and admin screens, with sound. [Watch or download the video (MP4, 109 MB)](https://github.com/Vanshlikestocode/queueless-showcase/releases/download/video/QueueLess-video.mp4).
+
 > **Status, stated plainly.** QueueLess is built and tested, and loaded with a real canteen menu of 284 dishes. It has not been used by real students yet, so nothing on this page claims a time saving. A four-week pilot is the next step.
 
 ## Why we built it
